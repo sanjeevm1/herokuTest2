@@ -2,13 +2,13 @@ var express=require("express");
 
 var app=express();
 
-app.listen(3000,(err)=>{
+app.listen(process.env.PORT || 5000,(err)=>{
 
     if(err)
     console.log("port error");
 
     else
-    console.log("port 3000 listened");
+    console.log("port listened");
 });
 
 app.get("/test",(req,res)=>{
